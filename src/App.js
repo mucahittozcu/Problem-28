@@ -3,10 +3,10 @@ import { useReducer } from 'react'
 
 function reducer(count, action) {
   if(action.type === "increment"){
-    return count - 1
+    return count + 1
   }
   else if (action.type === "decrement"){
-    return count + 1
+    return count - 1
   }
 }
 
@@ -25,13 +25,13 @@ export default function CountUp() {
           onClick={() => dispatch({ type: 'increment' })}
           className=' inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
         >
-          <MinusIcon className='-ml-0.5 mr-1.5 h-5 w-5' />1
+          <PlusIcon  className='-ml-0.5 mr-1.5 h-5 w-5' />1
         </button>
         <button
           onClick={() => dispatch({ type: 'decrement' })}
           className='inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
         >
-          <PlusIcon className='-ml-0.5 mr-1.5 h-5 w-5' />1
+          <MinusIcon className='-ml-0.5 mr-1.5 h-5 w-5' />1
         </button>
       </div>
     </div>
